@@ -3,8 +3,7 @@
     <div class="item-single-main">
       <div class="image">
         <div class="img-wrap">
-          <%= item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128', '') %>
-          <%= image_tag(item['mediumImageUrls'] , alt:@item.title) %>
+          <%= image_tag(item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128', ''), alt:item['itemName']) %>
         </div>
       </div>
       <div class="title">

@@ -12,15 +12,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-    if params[:q]
-      response = RakutenWebService::Ichiba::Item.search(
-        keyword: params[:q],
-        imageFlag: 1,
-      )
-      @items = response.first(20)
-　    @title = item['itemName']
-　 end
+ def show
   end
 
   private
