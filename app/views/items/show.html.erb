@@ -2,12 +2,13 @@
   <div class="container-inner inner-sm clearfix">
     <div class="item-single-main">
       <div class="image">
-        <div class="img-wrap">
-          <%= image_tag(item['mediumImageUrls'].first['imageUrl'].gsub('?_ex=128x128', ''), alt:item['itemName']) %>
+         <div class="img-wrap">
+          <% #TODO 商品イメージ %>
+          <%= image_tag @item.large_image %>
         </div>
       </div>
       <div class="title">
-        <%= item['itemName'] %>
+        <%= @item.title %>
       </div>
       <%= render 'action' , item: @item %>
     </div>
@@ -15,19 +16,19 @@
       <div class="side-box">
         <h4 class="side-box-title">Haveしたユーザー</h4>
         <div class="side-box-body">
-          <% # TODO Haveしたユーザー一覧 %>
+       <%= @item.have_users.count %>
 
         </div>
       </div>
       <div class="side-box">
         <h4 class="side-box-title">Wantしたユーザー</h4>
         <div class="side-box-body">
-          <% # TODO Wantしたユーザー一覧 %>
+          <%= @item.want_users.count %>
         </div>
       </div>
       <div class="text-center">
         <% #TODO 正しいリンク先に %>
-        <%= link_to('楽天詳細ページへ', '#') %>
+        <%= link_to('楽天詳細ページへ', ) %>
       </div>
     </div>
   </div>
