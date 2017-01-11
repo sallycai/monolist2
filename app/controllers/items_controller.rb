@@ -13,7 +13,8 @@ class ItemsController < ApplicationController
   end
 
  def show
-  end
+   item = Item.find(params[:id])
+ end
 
   private
   def set_item
