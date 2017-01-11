@@ -39,7 +39,7 @@ class OwnershipsController < ApplicationController
     @item = Item.find(params[:item_id])
     
       if params[:type] == "Have"
-      current_user.unwant(@item)
+      current_user.unhave(@item)
     end
     
      if params[:type] == "Want"
