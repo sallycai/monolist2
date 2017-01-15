@@ -53,3 +53,17 @@ user4.follow(user1)
 user4.follow(user2)
 user4.follow(user3)
 
+user3.have(item1)
+user3.want(item2)
+user3.have(item3)
+user3.have(item4)
+
+user1.have(item1)
+user1.have(item3)
+user1.have(item4)
+
+user2.want(item1)
+user2.want(item3)
+user2.want(item4)
+
+user20.want(item1)
