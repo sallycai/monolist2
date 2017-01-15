@@ -1,7 +1,9 @@
 <h3>Top Wants Ranking</h3>
 <div class="table-responsive">
- <% @item_ids.each do |item| %>
-  Product ID: <%= item %>
-  <br>
+<% @items.each_with_index do |item, idx| %>
+  <%= idx + 1 %> 位
+  <%= image_tag(item.medium_image, alt:item.title) %>
+  <%= link_to item.title, item.detail_page_url %>
+  <br> <br>
 <% end %>
 </div>
